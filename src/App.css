@@ -1,24 +1,268 @@
-.App {
-  text-align: center;
+/* 
+    L I I M E X . C O M
+    Document   : style.css (/liimex/css/style.css)
+    Created on : 29-Jan-2017; 10:01
+    Author     : Andrew Sampson
+    Description: stylesheet for liimex.com
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+html, body {
+    font-family: "proxima-nova", sans-serif;
+    font-style: normal;
+    background-color: rgb(248, 250, 255);
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+/* COLORS */ 
+
+.bg-white {
+    background-color: rgb(255, 255, 255);
 }
 
-.App-intro {
-  font-size: large;
+.bg-liimex-blue {
+    background-color: rgb(0, 126, 255);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.bg-blue-dark {
+    background-color: rgb(0, 0, 120);
+}
+
+.bg-blue-middle {
+    background-color: rgb(128, 174, 255);
+}
+
+.bg-blue-light {
+    background-color: rgb(179, 206, 255);
+}
+
+.bg-gray {
+    background-color: rgb(150, 150, 150);
+}
+
+/* TYPOGRAPHY */ 
+
+.color-white {
+    color: rgb(255, 255, 255);
+}
+
+.color-liimex-blue {
+    color: rgb(0, 126, 255);
+}
+
+.color-blue-dark {
+    color: rgb(0, 0, 120);
+}
+
+.color-blue-middle {
+    color: rgb(128, 174, 255);
+}
+
+.color-blue-light {
+    color: rgb(179, 206, 255);
+}
+
+.color-gray {
+    color: rgb(150, 150, 150);
+}
+
+.center {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 48pt;
+    line-height: 60pt;
+    padding-top: 50px;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 36pt;
+    line-height: 44pt;
+    padding-bottom: 50px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 18pt;
+    line-height: 22pt;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 18pt;
+    line-height: 22pt;
+}
+
+/* LINKS */
+
+a {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18pt;
+    line-height: 22pt;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    padding-bottom: 4px;
+    padding-top: 50px; 
+    
+}
+
+a:hover {
+    color: rgb(179, 206, 255);
+    border-bottom: 1px rgb(179, 206, 255) solid;
+    text-decoration: none;
+}
+
+/* SHADOWS */
+
+.shadow {
+    filter: drop-shadow(0px 0px 20px rgb(179, 206, 255));
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.shadow:hover {
+    filter: drop-shadow(0px 0px 20px rgb(0, 126, 255));
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+/* ELEMENTS */ 
+
+section {
+    position: relative;
+    display: block;
+}
+
+#title {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+}
+
+#title h1 {
+    max-width: 650px;
+}
+
+#colors {
+    height: 50px;
+}
+
+#colors div {
+    height: 100%;
+    width: 16.666666666%;
+    float: left;
+}
+
+#typography {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#text-styles {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#text-styles div {
+    display: inline-block;
+    max-width: 600px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+}
+
+#long-copy {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#tiles {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+}
+
+.corner {
+    border-radius: 40px 0px 0px 0px;
+}
+
+#big-tile {
+    display: block;
+    width: auto;
+    height: 300px;
+    padding-bottom: 50px;
+}
+
+#tile-group {
+    padding-top: 50px;
+    text-align: center;
+}
+
+#tile-group div {
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+    width: 25%;
+    min-width: 300px;
+    height: 500px;
+}
+
+#buttons {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+}
+
+#button-container {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 20px 0px 20px 0px;
+    border: 1px rgba(0, 126, 255, 0) solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
+}
+
+.button h3 {
+    padding-bottom: 0px !important;
+}
+
+.button:hover {
+    border: 1px rgba(0, 126, 255, 1) solid;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
 }
