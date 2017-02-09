@@ -26,7 +26,6 @@ export default class extends React.Component{
       <Slider {...settings}>
           <div className="row image-slider">
           <div>
-          <img src="images/Logo_White.svg" alt="liimex" width="300px"></img>
           <h1 className="color-white">What if commercial insurance <br/>
           was simple and easy?
                 </h1>
@@ -44,14 +43,13 @@ export default class extends React.Component{
           
           <div className="row image-slider">
           <div>
-          <img src="Logo_White.svg" alt="liimex" width="300px"></img>
           <div className="row">
 
           <h1 className="color-white col-md-6">Find out what insurances your
           business needs within minutes,
           for free.         
           </h1>
-          <img className="col-md-6" src="Business.svg" alt="limmex business" width="500px" height="300px"/>
+          <img className="col-md-6" src="images/Business.svg" alt="limmex business" width="500px" height="300px"/>
           </div>
           <div className="row">
           <div className="col-md-3">
@@ -66,11 +64,13 @@ export default class extends React.Component{
 
           <div className="row image-slider">
           <div>
-          <img src="images/Logo_White.svg" alt="liimex" width="300px"></img>
-          <h1 className="color-white">We give you more of what you
+          <div className="row">
+          <h1 className="color-white col-md-6">We give you more of what you
           need and less of everything
           else.
-                </h1>
+          </h1>
+          <img className="col-md-6" src="images/Shield.svg" alt="limmex business" width="500px" height="300px" />
+          </div>
           <div className="row">
           <div className="col-md-3">
           <Link to="/our-offer" className="color-white">learn more</Link>
