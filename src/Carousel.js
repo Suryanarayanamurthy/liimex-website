@@ -18,7 +18,7 @@ export default class extends React.Component{
     var settings = {
       autoplay: true,
       wrapAround: true,
-      speed: 1500,
+      speed: 2000,
       slidesToShow: 1,
       slidesToScroll: 1
     };    
