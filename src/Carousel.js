@@ -16,9 +16,9 @@ export default class extends React.Component{
     };
     */
     var settings = {
-      autoplay: false,
+      autoplay: true,
       wrapAround: true,
-      speed: 500,
+      speed: 1500,
       slidesToShow: 1,
       slidesToScroll: 1
     };    
@@ -26,9 +26,11 @@ export default class extends React.Component{
       <Slider {...settings}>
           <div className="row image-slider">
           <div>
-          <h1 className="color-white">What if commercial insurance <br/>
+          <div className="row">
+          <h1 className="color-white col-md-6">What if commercial insurance <br/>
           was simple and easy?
-                </h1>
+           </h1>
+          </div>
           <div className="row">
           <div className="col-md-3">
           <Link to="/our-offer" className="color-white">learn more</Link>
@@ -45,9 +47,7 @@ export default class extends React.Component{
           <div>
           <div className="row">
 
-          <h1 className="color-white col-md-6">Find out what insurances your
-          business needs within minutes,
-          for free.         
+          <h1 className="color-white col-md-6">Find out what insurances your business needs within minutes, for free.         
           </h1>
           <img className="col-md-6" src="images/Business.svg" alt="limmex business" width="500px" height="300px"/>
           </div>
