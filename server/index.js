@@ -18,7 +18,8 @@ const staticFiles = [
   '/static/*',
   '/logo.svg',
   '/asset-manifest.json',
-  '/favicon.ico'
+  '/favicon.ico',
+  '/images/*'
 ]
 
 const routes = require('../src/routes').default()

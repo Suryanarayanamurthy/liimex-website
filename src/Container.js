@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import './Container.css'
+//import './Container.css'
 import Carousel from './Carousel'
 
 export default class extends React.Component {

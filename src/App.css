@@ -266,3 +266,39 @@ section {
     -o-transition: border 0.3s;
     transition: border 0.3s;
 }
+
+/* additional tweks on top of given style guide*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: right;
+}
+/* override the user agent stylesheet */
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: transparent;
+    border-bottom: 1px rgb(179, 206, 255) solid;
+}
+.nav a{
+    border-bottom: none;
+    color: rgb(255, 255, 255);
+    text-transform: none;
+}
+
+
+.image-slider{
+    margin-left: 40px;
+}
+/* override the nuka-carousel's "next", "prev" buttons and the bottom dots (buttons)thinge */
+.slider-decorator-0{
+    display: none;
+}
+.slider-decorator-1{
+    display: none;
+}
+.slider-decorator-2{
+    display: none;
+}
