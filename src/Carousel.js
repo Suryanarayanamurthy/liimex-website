@@ -1,6 +1,6 @@
 var React = require('react');
 var Slider = require('nuka-carousel')
-import { Link } from 'react-router'
+
 
 
 export default class extends React.Component{
@@ -27,17 +27,8 @@ export default class extends React.Component{
           <div className="row image-slider">
           <div>
           <div className="row">
-          <h1 className="color-white col-md-6">What if commercial insurance <br/>
-          was simple and easy?
+          <h1 className="color-white col-md-6">What if commercial insurance was simple and easy?
            </h1>
-          </div>
-          <div className="row">
-          <div className="col-md-3">
-          <Link to="/our-offer" className="color-white">learn more</Link>
-          </div>
-          <div className="col-md-3">
-          <Link to="/sign-up" className="color-white">sign up</Link>
-          </div>
           </div>
           </div>
           </div>
@@ -51,14 +42,6 @@ export default class extends React.Component{
           </h1>
           <img className="col-md-6" src="images/Business.svg" alt="limmex business" width="500px" height="300px"/>
           </div>
-          <div className="row">
-          <div className="col-md-3">
-          <Link to="/our-offer" className="color-white">learn more</Link>
-          </div>
-          <div className="col-md-3">
-          <Link to="/sign-up" className="color-white">sign up</Link>
-          </div>
-          </div>
           </div>
           </div>
 
@@ -70,14 +53,6 @@ export default class extends React.Component{
           else.
           </h1>
           <img className="col-md-6" src="images/Shield.svg" alt="limmex business" width="500px" height="300px" />
-          </div>
-          <div className="row">
-          <div className="col-md-3">
-          <Link to="/our-offer" className="color-white">learn more</Link>
-          </div>
-          <div className="col-md-3">
-          <Link to="/sign-up" className="color-white">sign up</Link>
-          </div>
           </div>
           </div>
           </div>
