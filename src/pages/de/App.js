@@ -12,8 +12,8 @@ export default class extends React.Component {
   }
   render() {
     return (
-    	<section>
-        <Container router={this.props.router} route={this.props.route}/>
+    	<section className="bg-liimex-blue">
+        <Container router={this.props.router} route={this.props.route} setHomeStyle={true}/>
     	  <Link to="/">
           	<img src="images/Logo_White.svg" alt="liimex" width="300px"/>
           </Link>

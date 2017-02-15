@@ -7,11 +7,13 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      //bgColor: props.initialColor
       bgColor: "bg-liimex-blue",
       ddTitle: "DE"
     };
     this.onDdSelect = this.onDdSelect.bind(this);
+    if(props.setHomeStyle){
+      console.log("in home style mode");
+    }
   }
 
    onDdSelect (eventKey){

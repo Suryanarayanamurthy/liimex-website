@@ -12,6 +12,9 @@ export default class extends React.Component {
       ddTitle: "EN"
     };
     this.onDdSelect = this.onDdSelect.bind(this);
+    if(props.setHomeStyle){
+      console.log("in home style mode");
+    }
   }
 
    onDdSelect (eventKey){
