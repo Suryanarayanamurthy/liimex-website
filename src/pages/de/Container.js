@@ -44,6 +44,11 @@ export default class extends React.Component {
             <li className={(this.state.txtColor)}><Link to="/de/insurance-directory">Insurance Directory</Link></li>
             <li className={(this.state.txtColor)}><Link to="/de/about-us">About Us</Link> </li>
             <li className={(this.state.txtColor)}><Link to="/de/our-offer">Our Offer</Link></li>
+            <li className="navbar-brand">
+              <Link to="/de">
+                <img src="../images/Logo_Blue.svg" width="30" height="30" alt="liimex_logo"/>
+              </Link>
+            </li>
             <NavDropdown title={this.state.ddTitle} id="lang_id">
               <MenuItem eventKey="EN"  onSelect={this.onDdSelect}>
                 <button className="dropdown-btn btn1">
