@@ -20,22 +20,19 @@ import SignUp_en from './pages/en/SignUp'
 const Routes = props => {
   return (
     <Router history={browserHistory}>
-      <Route path="/de" component={Container_de}>
-        <IndexRoute component={App_de} />
-        <Route path="/our-offer" component={OurOffer_de} />
-        <Route path="/about-us" component={AboutUs_de} />
-        <Route path="/insurance-directory" component={InsuranceDirectory_de} />
-        <Route path="/log-in" component={LogIn_de} />
-        <Route path="/sign-up" component={SignUp_de} />
-      </Route>
-      <Route path="/en" component={Container_en}>
-        <IndexRoute component={App_en} />
-        <Route path="/our-offer" component={OurOffer_en} />
-        <Route path="/about-us" component={AboutUs_en} />
-        <Route path="/insurance-directory" component={InsuranceDirectory_en} />
-        <Route path="/log-in" component={LogIn_en} />
-        <Route path="/sign-up" component={SignUp_en} />
-      </Route>
+      <Route path="/de" component={App_de}/>
+      <Route path="/de/our-offer" component={OurOffer_de} currentPath="our-offer" />
+      <Route path="/de/about-us" component={AboutUs_de} />
+      <Route path="/de/insurance-directory" component={InsuranceDirectory_de} />
+      <Route path="/de/log-in" component={LogIn_de} />
+      <Route path="/de/sign-up" component={SignUp_de} />
+      <Route path="/en" component={App_en}/>
+      <Route path="/en/our-offer" component={OurOffer_en} />
+      <Route path="/en/about-us" component={AboutUs_en} />
+      <Route path="/en/insurance-directory" component={InsuranceDirectory_en} />
+      <Route path="/en/log-in" component={LogIn_en} />
+      <Route path="/en/sign-up" component={SignUp_en} />
+      
       <Route path="*">
         <IndexRedirect to="/de" />
       </Route>

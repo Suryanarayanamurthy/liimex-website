@@ -5,10 +5,15 @@ import Container from './Container'
 
 
 export default class extends React.Component {
-  	
+  constructor(props) {
+    super(props);
+    console.log(this);
+    console.log(this.props);
+  }
   render() {
     return (
     	<section>
+        <Container router={this.props.router} route={this.props.route}/>
     	  <Link to="/">
           	<img src="images/Logo_White.svg" alt="liimex" width="300px"/>
           </Link>

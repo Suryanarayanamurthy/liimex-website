@@ -11,49 +11,42 @@ export default class extends React.Component {
       bgColor: "bg-liimex-blue",
       ddTitle: "DE"
     };
+    this.onDdSelect = this.onDdSelect.bind(this);
   }
 
-   onDdSelect = (eventKey)=>{
-    this.setState({
-      ddTitle:eventKey
-    });
+   onDdSelect (eventKey){
+    var pathStr = this.props.route.path;
+    var pathArr = pathStr.split("/");
+    var path = pathArr[pathArr.length -1];
+    
+    this.props.router.push('/'+eventKey.toLowerCase()+'/'+path);    
   }
   render() {
-    console.log(this.props);
-    if(this.props.location.pathname !="/")
-      {
-        
-        this.setState({
-          bgColor:""
-        });
-        
-      }
-    return (
+    return (      
       <div>
         <section className= {(this.state.bgColor) + " container-fluid"} id="title">
           <ul className="row nav color-white">
-            <li className="color-white"><Link to="/sign-up">Sign Up</Link></li>
-            <li className="color-white"><Link to="/log-in">Log In</Link></li>
-            <li className="color-white"><Link to="/insurance-directory">Insurance Directory</Link></li>
-            <li className="color-white"><Link to="/about-us">About Us</Link> </li>
-            <li className="color-white"><Link to="/our-offer">Our Offer</Link></li>
-            <NavDropdown title={this.state.ddTitle}>
-              <MenuItem onSelect={this.onDdSelect} eventKey="EN">
-                <button class="dropdown-btn btn1">
+            <li className="color-white"><Link to="/de/sign-up">Sign Up</Link></li>
+            <li className="color-white"><Link to="/de/log-in">Log In</Link></li>
+            <li className="color-white"><Link to="/de/insurance-directory">Insurance Directory</Link></li>
+            <li className="color-white"><Link to="/de/about-us">About Us</Link> </li>
+            <li className="color-white"><Link to="/de/our-offer">Our Offer</Link></li>
+            <NavDropdown title={this.state.ddTitle} id="lang_id">
+              <MenuItem eventKey="EN"  onSelect={this.onDdSelect}>
+                <button className="dropdown-btn btn1">
                   English 
-                  <span class="flag-icon flag-icon-gb"></span>
+                  <span className="flag-icon flag-icon-gb"></span>
                 </button>
                 </MenuItem>
-                <MenuItem onSelect={this.onDdSelect} eventKey="DE">
-                <button class="dropdown-btn btn1">
+                <MenuItem  eventKey="DE"  onSelect={this.onDdSelect}>
+                <button className="dropdown-btn btn1">
                   German 
-                  <span class="flag-icon flag-icon-de"></span>
+                  <span className="flag-icon flag-icon-de"></span>
                 </button>
               </MenuItem>
             </NavDropdown>
           </ul>          
-        </section>
-        {this.props.children}
+        </section>        
       </div>
     );
   }

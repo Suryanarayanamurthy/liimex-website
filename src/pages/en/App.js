@@ -9,6 +9,7 @@ export default class extends React.Component {
   render() {
     return (
     	<section>
+        <Container router={this.props.router} route={this.props.route}/>
     	  <Link to="/">
           	<img src="images/Logo_White.svg" alt="liimex" width="300px"/>
           </Link>
