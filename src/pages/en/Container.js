@@ -20,8 +20,10 @@ export default class extends React.Component {
    onDdSelect (eventKey){
     var pathStr = this.props.route.path;
     var pathArr = pathStr.split("/");
-    var path = pathArr[pathArr.length -1];    
-    this.props.router.push('/'+eventKey.toLowerCase()+'/'+path);
+    var path = "/"+ pathArr[pathArr.length -1];
+    if (path == "/en" || path == "/de")
+      var path = "";    
+    this.props.router.push('/'+eventKey.toLowerCase()+ path);    
   }
 
   render() {
