@@ -7,13 +7,11 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bgColor: "bg-liimex-blue",
-      ddTitle: "DE"
+      bgColor: "bg-white",
+      ddTitle: "DE",
+      txtColor: "color-liimex-blue"
     };
-    this.onDdSelect = this.onDdSelect.bind(this);
-    if(props.setHomeStyle){
-      console.log("in home style mode");
-    }
+    this.onDdSelect = this.onDdSelect.bind(this);    
   }
 
    onDdSelect (eventKey){
@@ -25,16 +23,27 @@ export default class extends React.Component {
     
     this.props.router.push('/'+eventKey.toLowerCase()+ path);    
   }
+  componentDidMount(){
+   if(this.props.setHomeStyle){
+      console.log("in home style mode");
+      this.setState({
+        bgColor: "bg-liimex-blue",
+        txtColor: "color-white"
+      });
+    }
+  }
+
   render() {
+ 
     return (      
       <div>
         <section className= {(this.state.bgColor) + " container-fluid"} id="title">
-          <ul className="row nav color-white">
-            <li className="color-white"><Link to="/de/sign-up">Sign Up</Link></li>
-            <li className="color-white"><Link to="/de/log-in">Log In</Link></li>
-            <li className="color-white"><Link to="/de/insurance-directory">Insurance Directory</Link></li>
-            <li className="color-white"><Link to="/de/about-us">About Us</Link> </li>
-            <li className="color-white"><Link to="/de/our-offer">Our Offer</Link></li>
+          <ul className="row nav">
+            <li className={(this.state.txtColor)}><Link to="/de/sign-up">Sign Up</Link></li>
+            <li className={(this.state.txtColor)}><Link to="/de/log-in">Log In</Link></li>
+            <li className={(this.state.txtColor)}><Link to="/de/insurance-directory">Insurance Directory</Link></li>
+            <li className={(this.state.txtColor)}><Link to="/de/about-us">About Us</Link> </li>
+            <li className={(this.state.txtColor)}><Link to="/de/our-offer">Our Offer</Link></li>
             <NavDropdown title={this.state.ddTitle} id="lang_id">
               <MenuItem eventKey="EN"  onSelect={this.onDdSelect}>
                 <button className="dropdown-btn btn1">

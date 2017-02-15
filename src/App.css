@@ -284,10 +284,15 @@ li {
 }
 .nav a{
     border-bottom: none;
+    text-transform: none;   
+}
+.color-white a{
     color: rgb(255, 255, 255);
-    text-transform: none;
 }
 
+.color-liimex-blue a{
+    color: rgb(0, 126, 255);
+}
 
 .image-slider{
     margin-left: 40px;
