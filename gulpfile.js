@@ -18,10 +18,8 @@ gulp.task('styles', function(){
 
 	var mergedStream = merge(scssStream)
         .pipe(concat('App.css'))
-        .pipe(minify())
         .pipe(gulp.dest('src/'));
 	return mergedStream;
-
 });
 /*
 if gulp watch error (ENOSPC), in Linux run following command.
