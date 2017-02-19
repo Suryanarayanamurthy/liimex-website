@@ -24,15 +24,24 @@ $color-liimex-blue: rgb(0, 126, 255);
 .bg-liimex-blue {
   nav {
     background-color: $bg-liimex-blue;
-    border-color: $bg-liimex-blue;  
+    border-color: $bg-liimex-blue;
     }
   .navbar-nav{
     li{
       a{
         color: $color-white;
+        &:focus, &:hover {
+        background-color: transparent;
+        border-bottom: 1px rgb(179, 206, 255) solid;
+        color: $color-white;
+        }
+        border-bottom: none;
+        font-weight: 300;
+        font-size: 12pt;
+        line-height: 22pt;
       }
     }
-   }
+   } 
 }
 
 .bg-white{

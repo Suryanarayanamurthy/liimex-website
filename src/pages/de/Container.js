@@ -10,7 +10,8 @@ export default class extends React.Component {
     this.state = {
       bgColor: "bg-white",
       ddTitle: "DE",
-      txtColor: "color-liimex-blue"
+      txtColor: "color-liimex-blue",
+      showBrand: true
     };
     this.onDdSelect = this.onDdSelect.bind(this);    
   }
@@ -29,7 +30,8 @@ export default class extends React.Component {
       console.log("in home style mode");
       this.setState({
         bgColor: "bg-liimex-blue",
-        txtColor: "color-white"
+        txtColor: "color-white",
+        showBrand: false
       });
     }
   }
@@ -40,12 +42,16 @@ export default class extends React.Component {
  
 <section className= {(this.state.bgColor)} id="title">
    <Navbar inverse collapseOnSelect>   
-       <Navbar.Header >
-         <Navbar.Brand>
-           <Link to="/de">
-              <img src="../images/Logo_Blue.svg" alt="liimex_logo" />              
-           </Link>
-         </Navbar.Brand>
+       <Navbar.Header>
+        {(function(showBrand) {
+          if (showBrand) {
+            return (<Navbar.Brand>
+                             <Link to="/de">
+                                <img src="../images/Logo_Blue.svg" alt="liimex_logo" />              
+                             </Link>
+                           </Navbar.Brand>);
+          }
+        })(this.state.showBrand)}
          <Navbar.Toggle />
        </Navbar.Header>     
       <Navbar.Collapse>
