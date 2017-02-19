@@ -1,3 +1,76 @@
+.carousel-section {
+  margin-left: 30px; }
+
+/* override the style guide, user agent and bootstrap's css, final render place*/
+.bg-liimex-blue .bg-white ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.bg-liimex-blue .bg-white li {
+  display: inline-block; }
+
+.bg-liimex-blue .bg-white a {
+  display: block;
+  padding: 6px 12px; }
+
+.bg-liimex-blue nav {
+  background-color: #007eff;
+  border-color: #007eff; }
+
+.bg-liimex-blue .navbar-nav li a {
+  color: white;
+  border-bottom: none;
+  font-weight: 300;
+  font-size: 12pt;
+  line-height: 22pt; }
+  .bg-liimex-blue .navbar-nav li a:focus, .bg-liimex-blue .navbar-nav li a:hover {
+    background-color: transparent;
+    border-bottom: 1px #b3ceff solid;
+    color: white; }
+
+.bg-white nav {
+  background-color: white;
+  border-color: white; }
+
+.bg-white .navbar-nav li a {
+  color: #007eff;
+  border-bottom: none;
+  font-weight: 300;
+  font-size: 12pt;
+  line-height: 22pt; }
+  .bg-white .navbar-nav li a:focus, .bg-white .navbar-nav li a:hover {
+    background-color: transparent;
+    border-bottom: 1px #b3ceff solid;
+    color: #007eff; }
+
+.bg-white .navbar-nav .active > a {
+  background-color: white;
+  color: #007eff;
+  border-bottom: 1px #b3ceff solid; }
+  .bg-white .navbar-nav .active > a:focus, .bg-white .navbar-nav .active > a:hover {
+    background-color: transparent;
+    border-bottom: 1px #b3ceff solid;
+    color: #007eff; }
+
+.bg-white .navbar-header a {
+  border-bottom: inherit; }
+
+.bg-white .navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #000; }
+
+.bg-white .navbar-inverse .navbar-toggle:focus, .bg-white .navbar-inverse .navbar-toggle:hover {
+  background-color: #fff; }
+
+.bg-white .navbar-brand img {
+  display: block;
+  width: inherit;
+  height: inherit; }
+
+.bg-white .navbar-inverse .navbar-collapse, .bg-white .navbar-inverse .navbar-form {
+  border-color: #101010;
+  margin-top: 25px; }
+
 /* 
     L I I M E X . C O M
     Document   : style.css (/liimex/css/style.css)
@@ -246,73 +319,3 @@ li {
 /* override the nuka-carousel's "next", "prev" buttons and the bottom dots (buttons)thinge */
 .slider-decorator-0, .slider-decorator-1, .slider-decorator-2 {
   display: none; }
-
-/* override the style guide, user agent and bootstrap's css, final render place*/
-.bg-liimex-blue .bg-white ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.bg-liimex-blue .bg-white li {
-  display: inline-block; }
-
-.bg-liimex-blue .bg-white a {
-  display: block;
-  padding: 6px 12px; }
-
-.bg-liimex-blue nav {
-  background-color: #007eff;
-  border-color: #007eff; }
-
-.bg-liimex-blue .navbar-nav li a {
-  color: white;
-  border-bottom: none;
-  font-weight: 300;
-  font-size: 12pt;
-  line-height: 22pt; }
-  .bg-liimex-blue .navbar-nav li a:focus, .bg-liimex-blue .navbar-nav li a:hover {
-    background-color: transparent;
-    border-bottom: 1px #b3ceff solid;
-    color: white; }
-
-.bg-white nav {
-  background-color: white;
-  border-color: white; }
-
-.bg-white .navbar-nav li a {
-  color: #007eff;
-  border-bottom: none;
-  font-weight: 300;
-  font-size: 12pt;
-  line-height: 22pt; }
-  .bg-white .navbar-nav li a:focus, .bg-white .navbar-nav li a:hover {
-    background-color: transparent;
-    border-bottom: 1px #b3ceff solid;
-    color: #007eff; }
-
-.bg-white .navbar-nav .active > a {
-  background-color: white;
-  color: #007eff;
-  border-bottom: 1px #b3ceff solid; }
-  .bg-white .navbar-nav .active > a:focus, .bg-white .navbar-nav .active > a:hover {
-    background-color: transparent;
-    border-bottom: 1px #b3ceff solid;
-    color: #007eff; }
-
-.bg-white .navbar-header a {
-  border-bottom: inherit; }
-
-.bg-white .navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #000; }
-
-.bg-white .navbar-inverse .navbar-toggle:focus, .bg-white .navbar-inverse .navbar-toggle:hover {
-  background-color: #fff; }
-
-.bg-white .navbar-brand img {
-  display: block;
-  width: inherit;
-  height: inherit; }
-
-.bg-white .navbar-inverse .navbar-collapse, .bg-white .navbar-inverse .navbar-form {
-  border-color: #101010;
-  margin-top: 25px; }
