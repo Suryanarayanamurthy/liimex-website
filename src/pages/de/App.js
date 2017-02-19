@@ -20,7 +20,7 @@ export default class extends React.Component {
           <Carousel/>
           <div className="row">
 	        <div className="col-md-3">
-	        	<Link to="/our-offer" className="color-white">learn more</Link>
+	        	<Link to="/our-offer" className="color-white">learn more...</Link>
           	</div>
           	<div className="col-md-3">
           		<Link to="/sign-up" className="color-white">sign up</Link>

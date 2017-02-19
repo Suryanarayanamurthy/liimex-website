@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
-import {NavDropdown, MenuItem} from 'react-bootstrap'
+import {Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid, Row, Col, Thumbnail} from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
 
 export default class extends React.Component {
@@ -36,36 +37,52 @@ export default class extends React.Component {
   render() {
  
     return (      
-      <div>
-        <section className= {(this.state.bgColor) + " container-fluid"} id="title">
-          <ul className="row nav">
-            <li className={(this.state.txtColor)}><Link to="/de/sign-up">Sign Up</Link></li>
-            <li className={(this.state.txtColor)}><Link to="/de/log-in">Log In</Link></li>
-            <li className={(this.state.txtColor)}><Link to="/de/insurance-directory">Insurance Directory</Link></li>
-            <li className={(this.state.txtColor)}><Link to="/de/about-us">About Us</Link> </li>
-            <li className={(this.state.txtColor)}><Link to="/de/our-offer">Our Offer</Link></li>
-            <li className="navbar-brand">
-              <Link to="/de">
-                <img src="../images/Logo_Blue.svg" width="30" height="30" alt="liimex_logo"/>
-              </Link>
-            </li>
-            <NavDropdown title={this.state.ddTitle} id="lang_id">
-              <MenuItem eventKey="EN"  onSelect={this.onDdSelect}>
-                <button className="dropdown-btn btn1">
-                  English 
-                  <span className="flag-icon flag-icon-gb"></span>
-                </button>
-                </MenuItem>
-                <MenuItem  eventKey="DE"  onSelect={this.onDdSelect}>
-                <button className="dropdown-btn btn1">
-                  German 
-                  <span className="flag-icon flag-icon-de"></span>
-                </button>
-              </MenuItem>
-            </NavDropdown>
-          </ul>          
-        </section>        
-      </div>
+ 
+<section className= {(this.state.bgColor)} id="title">
+   <Navbar inverse collapseOnSelect>   
+       <Navbar.Header >
+         <Navbar.Brand>
+           <Link to="/de">
+              <img src="../images/Logo_Blue.svg" alt="liimex_logo" />              
+           </Link>
+         </Navbar.Brand>
+         <Navbar.Toggle />
+       </Navbar.Header>     
+      <Navbar.Collapse>
+         <Nav pullRight>
+           <LinkContainer to= "/de/our-offer"> 
+            <NavItem>Our Offer</NavItem>
+           </LinkContainer>
+           <LinkContainer to= "/de/about-us">
+            <NavItem>About Us</NavItem>
+           </LinkContainer>
+           <LinkContainer to="/de/insurance-directory">
+            <NavItem>Insurance Directory</NavItem>
+           </LinkContainer>
+           <LinkContainer to= "/de/log-in">
+            <NavItem >Log In</NavItem>
+           </LinkContainer>
+           <LinkContainer to="/de/sign-up">
+            <NavItem>Sign Up</NavItem>
+           </LinkContainer>
+           <NavDropdown title={this.state.ddTitle} id="lang_select">
+             <MenuItem eventKey="EN"  onSelect={this.onDdSelect}>
+               <button className="dropdown-btn btn1">
+                 English 
+                 <span className="flag-icon flag-icon-gb"></span>
+               </button>
+               </MenuItem>
+               <MenuItem  eventKey="DE"  onSelect={this.onDdSelect}>
+               <button className="dropdown-btn btn1">
+                 German 
+                 <span className="flag-icon flag-icon-de"></span>
+               </button>
+             </MenuItem>
+           </NavDropdown>        
+         </Nav>
+      </Navbar.Collapse>       
+     </Navbar>    
+</section> 
     );
   }
 }
